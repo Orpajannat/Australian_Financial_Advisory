@@ -8,37 +8,37 @@ const services = [
   {
     title: 'Financial Planning',
     description: 'Plan your financial future with confidence through clear, practical strategies built around your life and goals.',
-    image: '/images/Conversation.jpg',
+    image: '/images/service1.jpg',
     position: 'object-center',
   },
   {
     title: 'Investment Advice',
     description: 'Smart investment strategies designed to support sustainable growth while reflecting your comfort with risk.',
-    image: '/images/heroBanner.jpg',
+    image: '/images/service2.jpg',
     position: 'object-[42%_center]',
   },
   {
     title: 'Wealth Management',
     description: 'Grow and protect your wealth over time with coordinated advice that keeps the full financial picture in view.',
-    image: '/images/heroBanner.jpg',
+    image: '/images/service3.png',
     position: 'object-[65%_center]',
   },
   {
     title: 'Insurance & Risk',
     description: 'Protect what matters most to you with considered cover and risk strategies for greater peace of mind.',
-    image: '/images/Conversation.jpg',
+    image: '/images/service4.jpg',
     position: 'object-left',
   },
   {
     title: 'Retirement Planning',
     description: 'Build a clear path toward a secure and comfortable retirement lifestyle with advice that evolves with you.',
-    image: '/images/Conversation.jpg',
+    image: '/images/service5.jpg',
     position: 'object-right',
   },
   {
     title: 'Business Advisory',
     description: 'Make informed business decisions with financial solutions shaped around stability, opportunity, and growth.',
-    image: '/images/heroBanner.jpg',
+    image: '/images/service6.jpg',
     position: 'object-[78%_center]',
   },
 ]

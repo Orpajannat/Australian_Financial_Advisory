@@ -3,6 +3,8 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
+import { usePathname } from 'next/navigation';
+import { DollarSign } from 'lucide-react';
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -13,6 +15,8 @@ const navLinks = [
 ]
 
 export default function Header() {
+  const pathname = usePathname();
+
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
@@ -31,11 +35,24 @@ export default function Header() {
           </Link>
 
           <nav className="hidden items-center gap-7 lg:flex" aria-label="Main navigation">
-            {navLinks.map((link) => (
-              <Link key={link.href} href={link.href} className="text-sm font-medium text-black/80 transition hover:text-blue-400/50">
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href;
+
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`flex items-center gap-2 border-b-2 px-3 py-1.5 text-sm font-medium transition-all duration-300 ${
+                  isActive
+                  ? 'border-[#03153E]/80 text-neutral-900/50'
+                  : 'border-transparent text-black/80 hover:border-[#03153E]/80 hover:text-white'
+                  }`}
+                >
+                  {link.label}
+                  {isActive && <DollarSign size={14}/>}
+                </Link>
+              );
+            })}
           </nav>
 
           <div className="flex items-center gap-3">
