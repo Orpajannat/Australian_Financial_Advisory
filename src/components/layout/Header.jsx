@@ -139,7 +139,7 @@ export default function Header() {
                   }`}
                 >
                   {link.label}
-                  {isActive && <DollarSign size={14}/>}
+                  {/* {isActive && <DollarSign size={14}/>} */}
                 </Link>
               );
             })}
