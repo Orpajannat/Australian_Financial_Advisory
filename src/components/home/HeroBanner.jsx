@@ -35,8 +35,8 @@ export default function HeroBanner() {
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-            <Link href="/contact" className="inline-flex w-fit items-center gap-3 rounded-full bg-[#1874E8] py-2.5 pl-2.5 pr-6 text-sm font-bold text-[#0c0c51] shadow-lg shadow-black/20 transition hover:-translate-y-0.5 hover:bg-white">
-              <span className="grid h-9 w-9 place-items-center rounded-full bg-white text-lg" aria-hidden="true">→</span>
+            <Link href="/contact" className="inline-flex w-fit items-center gap-3 rounded-full bg-white py-2.5 pl-2.5 pr-6 text-sm font-bold text-[#111150] shadow-lg shadow-black/20 transition hover:-translate-y-0.5 hover:bg-white">
+              <span className="grid h-9 w-9 place-items-center rounded-full bg-[#111150] text-lg text-white" aria-hidden="true">→</span>
               Start Your Free Consultation
             </Link>
             <Link href="/services" className="w-fit flex flex-row items-center gap-3 rounded-full px-5 py-3 text-sm font-semibold text-white/85 hover:text-white duration-200 hover:gap-5 hover:-translate-y-0.5">
