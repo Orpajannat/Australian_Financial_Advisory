@@ -25,7 +25,7 @@ export default function Header() {
         <div className="flex h-16 items-center justify-between">
           <Link href="/" className="relative block h-20 w-36 shrink-0 overflow-hidden sm:h-11 sm:w-48" aria-label="Australian Financial Advisory home">
             <Image
-              src="/images/newLogo.png"
+              src="/images/MainLogo.png"
               alt="Australian Financial Advisory"
               fill
               sizes="(max-width: 640px) 144px, 192px"
@@ -44,8 +44,8 @@ export default function Header() {
                   href={link.href}
                   className={`flex items-center gap-2 border-b-2 px-3 py-1.5 text-sm font-medium transition-all duration-300 ${
                   isActive
-                  ? 'border-[#03153E]/80 text-neutral-900/50'
-                  : 'border-transparent text-black/80 hover:border-[#03153E]/80 hover:text-white'
+                  ? 'border-[#03153E]/80 text-blue-300'
+                  : 'border-transparent text-sky-400 hover:border-[#03153E]/80 hover:text-blue-400'
                   }`}
                 >
                   {link.label}
@@ -56,8 +56,8 @@ export default function Header() {
           </nav>
 
           <div className="flex items-center gap-3">
-            <Link href="/contact" className="hidden items-center gap-2 rounded-full bg-[#a29dff] py-2 pl-2 pr-4 text-sm font-bold text-[#111150] transition hover:bg-white sm:flex">
-              <span className="grid h-8 w-8 place-items-center rounded-full bg-white" aria-hidden="true">→</span>
+            <Link href="/contact" className="hidden items-center gap-2 rounded-full bg-[#1874E8] py-2 pl-2 pr-4 text-sm font-bold text-white/80 hover:text-[#111150] transition hover:bg-white sm:flex">
+              <span className="grid h-8 w-8 place-items-center rounded-full bg-white text-[#111150]" aria-hidden="true">→</span>
               Book a Call
             </Link>
             <button

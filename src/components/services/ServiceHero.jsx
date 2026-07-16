@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { MoveRight } from 'lucide-react';
+import Link from 'next/link'
 
 export default function ServiceHero () {
   return (
@@ -12,19 +13,19 @@ export default function ServiceHero () {
                 <h1 className='mt-6 max-w-4xl text-4xl font-bold leading-[1.08] tracking-[-0.045em] text-balance drop-shadow-[0_4px_18px_rgba(0,0,0,0.28)] sm:text-5xl md:text-6xl lg:text-7xl'>Financial Solutions Designed Around Your Goals.</h1>
                 <p className='mt-6 max-w-2xl text-[0.95rem] leading-7 text-white/78 sm:mt-7 sm:text-lg sm:leading-8'>Whether you&apos;re planning for the future, growing your wealth, protecting your assets, or making important business decisions, our experienced advisors provide personalized financial strategies tailored to your unique needs. We simplify complex financial decisions so you can move forward with confidence.</p>
                 <div className='mt-8 flex w-full flex-col items-stretch gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-6 lg:gap-10'>
-                    <button className='flex w-full shrink-0 cursor-pointer flex-row items-center justify-center gap-2 rounded-xl bg-linear-to-r from-[#1597f5] to-[#075de5] px-6 py-4 text-sm font-bold text-white shadow-[0_14px_35px_rgba(7,93,229,0.3)] transition duration-300 hover:-translate-y-1 hover:gap-5 hover:from-[#27adff] hover:to-[#176ff0] hover:shadow-[0_18px_42px_rgba(18,138,255,0.38)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#63b8ff] active:translate-y-0 sm:w-fit sm:px-8 sm:text-base'>
+                    <Link href="/contact" className='flex w-full shrink-0 cursor-pointer flex-row items-center justify-center gap-2 rounded-xl bg-linear-to-r from-[#1597f5] to-[#075de5] px-6 py-4 text-sm font-bold text-white shadow-[0_14px_35px_rgba(7,93,229,0.3)] transition duration-300 hover:-translate-y-1 hover:gap-5 hover:from-[#27adff] hover:to-[#176ff0] hover:shadow-[0_18px_42px_rgba(18,138,255,0.38)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#63b8ff] active:translate-y-0 sm:w-fit sm:px-8 sm:text-base'>
                         Book a Free Consultation
                         <MoveRight size={18}/>
-                    </button>
+                    </Link>
                     {/* <button className='flex flex-row items-center gap-2 mt-8 w-full cursor-pointer shrink-0 hover:gap-5 transition duration-300 hover:-translate-y-1 hover:border-b-2 hover:border-white hover:w-fit'>
                         Explore Services
                         <MoveRight size={18}/>
                     </button> */}
-                    <button className="group relative inline-flex w-full shrink-0 cursor-pointer flex-row items-center justify-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:gap-5 sm:w-fit sm:justify-start">
+                    <Link href="#service-list" className="group relative inline-flex w-full shrink-0 cursor-pointer flex-row items-center justify-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:gap-5 sm:w-fit sm:justify-start">
                         Explore Services
                         <MoveRight size={18} />
                         <span className="absolute -bottom-1 left-0 h-0.5 w-full origin-left scale-x-0 bg-blue-500 transition-transform duration-300 group-hover:scale-x-100 sm:w-40"></span>
-                    </button>
+                    </Link>
                 </div>
             </div>
         </div>

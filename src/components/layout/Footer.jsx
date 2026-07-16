@@ -41,10 +41,17 @@ export default function Footer() {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_75%_35%,rgba(20,90,220,0.13),transparent_32%),radial-gradient(circle_at_10%_90%,rgba(10,76,185,0.13),transparent_28%)]" />
 
       <div className="relative mx-auto max-w-7xl">
-        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-[1.25fr_0.75fr_1fr_1.25fr] lg:gap-10 xl:gap-16">
+        <div className="grid items-start gap-12 sm:grid-cols-2 lg:grid-cols-[1.25fr_0.75fr_1fr_1.25fr] lg:gap-10 xl:gap-16">
           <div>
             <Link href="/" className="relative block h-16 w-64 overflow-hidden transition duration-500 hover:-translate-y-1 hover:scale-[1.02]" aria-label="Australian Financial Advisory home">
-              <Image src="/images/Footer.png" alt="Australian Financial Advisory" fill sizes="256px" className="object-contain" />
+              <Image
+                src="/images/FooterLogo.png"
+                alt="Australian Financial Advisory"
+                width={1772}
+                height={608}
+                sizes="331px"
+                className="absolute -left-[37px] -top-[21px] h-auto w-[331px] max-w-none"
+              />
             </Link>
             <p className="mt-7 max-w-xs text-base leading-7 text-white/70 transition-colors hover:text-white">
               Empowering financial futures. Helping individuals, families and businesses build, grow and protect their wealth.
@@ -81,7 +88,7 @@ export default function Footer() {
             <h2 className="text-sm font-bold uppercase tracking-[0.16em]">Services</h2>
             <nav className="mt-7 grid gap-4" aria-label="Footer services">
               {serviceLinks.map((service) => (
-                <Link key={service} href="/services" className="group w-fit text-base text-white/75 transition duration-300 hover:translate-x-2 hover:text-[#4d98ff]">
+                <Link key={service} href="#service-list" className="group w-fit text-base text-white/75 transition duration-300 hover:translate-x-2 hover:text-[#4d98ff]">
                   <span className="bg-linear-to-r from-[#4d98ff] to-[#4d98ff] bg-[length:0_1px] bg-left-bottom bg-no-repeat pb-1 transition-[background-size] duration-300 group-hover:bg-[length:100%_1px]">{service}</span>
                 </Link>
               ))}
@@ -105,7 +112,7 @@ export default function Footer() {
               </div>
             </div>
 
-            <Link href="/contact" className="mt-8 inline-flex items-center justify-center rounded-full bg-[#0864ef] px-7 py-4 text-sm font-bold shadow-lg shadow-[#0864ef]/20 transition duration-300 hover:-translate-y-1 hover:scale-[1.03] hover:bg-linear-to-r hover:from-[#124bb0] hover:via-[#F7DB5E] hover:to-[#124bb0] hover:shadow-xl">
+            <Link href="/contact" className="mt-8 inline-flex items-center justify-center rounded-full bg-[#0864ef] px-7 py-4 text-sm font-bold shadow-lg shadow-[#0864ef]/20 transition duration-300 hover:-translate-y-1 hover:scale-[1.03] hover:bg-linear-to-r hover:from-[#124bb0] hover:via-[#F7F7F7]/30 hover:to-[#124bb0] hover:shadow-xl">
               Book a Consultation
             </Link>
           </div>

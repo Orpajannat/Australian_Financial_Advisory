@@ -1,15 +1,8 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import {
   ArrowUpRight,
-  BriefcaseBusiness,
   Clock3,
-  DollarSign,
-  FileText,
-  GraduationCap,
-  Landmark,
-  ShieldCheck,
-  TrendingUp,
-  WalletCards,
 } from 'lucide-react'
 
 const articles = [
@@ -19,9 +12,7 @@ const articles = [
     category: 'Financial Planning',
     readTime: '5 min read',
     slug: 'building-a-strong-financial-foundation',
-    icon: GraduationCap,
-    cover: 'from-[#dcecff] via-[#eef6ff] to-[#c8e1ff]',
-    ink: 'text-[#086bd7]',
+    image: '/images/Blog1.jpg',
     badge: 'bg-[#0875ec] text-white',
   },
   {
@@ -30,9 +21,7 @@ const articles = [
     category: 'Investment',
     readTime: '6 min read',
     slug: 'investment-strategies-for-beginners',
-    icon: TrendingUp,
-    cover: 'from-[#dff5e9] via-[#f0faf4] to-[#c9ead8]',
-    ink: 'text-[#168455]',
+    image: '/images/Blog2.jpg',
     badge: 'bg-[#18885b] text-white',
   },
   {
@@ -41,9 +30,7 @@ const articles = [
     category: 'Retirement',
     readTime: '5 min read',
     slug: 'preparing-for-a-comfortable-retirement',
-    icon: Landmark,
-    cover: 'from-[#ece5ff] via-[#f7f4ff] to-[#ded1ff]',
-    ink: 'text-[#7650dc]',
+    image: '/images/Blog3.jpg',
     badge: 'bg-[#7650dc] text-white',
   },
   {
@@ -52,9 +39,7 @@ const articles = [
     category: 'Risk Management',
     readTime: '5 min read',
     slug: 'protecting-wealth-through-risk-management',
-    icon: ShieldCheck,
-    cover: 'from-[#ffeadc] via-[#fff7f0] to-[#ffddc7]',
-    ink: 'text-[#e46d20]',
+    image: '/images/Blog4.jpg',
     badge: 'bg-[#ed7628] text-white',
   },
   {
@@ -63,9 +48,7 @@ const articles = [
     category: 'Financial Planning',
     readTime: '6 min read',
     slug: 'managing-cash-flow-for-financial-success',
-    icon: WalletCards,
-    cover: 'from-[#dff4f7] via-[#f0fbfc] to-[#cae9ee]',
-    ink: 'text-[#168697]',
+    image: '/images/Blog5.jpg',
     badge: 'bg-[#168697] text-white',
   },
   {
@@ -74,9 +57,7 @@ const articles = [
     category: 'Planning Tips',
     readTime: '6 min read',
     slug: 'financial-planning-mistakes-to-avoid',
-    icon: FileText,
-    cover: 'from-[#e4ebf5] via-[#f5f8fc] to-[#d6e1ef]',
-    ink: 'text-[#345a89]',
+    image: '/images/Blog6.jpg',
     badge: 'bg-[#345a89] text-white',
   },
   {
@@ -85,9 +66,7 @@ const articles = [
     category: 'Market Perspectives',
     readTime: '5 min read',
     slug: 'how-inflation-impacts-investments',
-    icon: DollarSign,
-    cover: 'from-[#fff0cf] via-[#fff9eb] to-[#f5dfaa]',
-    ink: 'text-[#b77a0a]',
+    image: '/images/Blog7.jpg',
     badge: 'bg-[#b77a0a] text-white',
   },
   {
@@ -96,9 +75,7 @@ const articles = [
     category: 'Estate Planning',
     readTime: '5 min read',
     slug: 'estate-planning-made-simple',
-    icon: FileText,
-    cover: 'from-[#e3f2e8] via-[#f4faf6] to-[#cfe6d7]',
-    ink: 'text-[#367b4d]',
+    image: '/images/Blog8.png',
     badge: 'bg-[#367b4d] text-white',
   },
   {
@@ -107,32 +84,29 @@ const articles = [
     category: 'Business',
     readTime: '6 min read',
     slug: 'business-financial-planning-essentials',
-    icon: BriefcaseBusiness,
-    cover: 'from-[#dfe7ff] via-[#f2f5ff] to-[#ccd8fa]',
-    ink: 'text-[#385bb7]',
+    image: '/images/Blog9.jpg',
     badge: 'bg-[#385bb7] text-white',
   },
 ]
 
 function ArticleCard ({ article, index }) {
-  const Icon = article.icon
-
   return (
     <article className='group flex min-h-[31rem] flex-col overflow-hidden rounded-[1.6rem] border border-[#dce6f3] bg-white shadow-[0_14px_40px_rgba(8,48,105,0.06)] transition duration-500 hover:-translate-y-2 hover:border-[#93c5f8] hover:shadow-[0_26px_60px_rgba(8,72,155,0.14)]'>
-      <div className={`relative aspect-[16/9] overflow-hidden bg-linear-to-br ${article.cover}`}>
-        <div className='pointer-events-none absolute -right-10 -top-16 h-48 w-48 rounded-full border border-current opacity-[0.07] transition duration-700 group-hover:scale-125' aria-hidden='true' />
-        <div className='pointer-events-none absolute -bottom-14 -left-10 h-40 w-40 rounded-full bg-white/35 blur-xl transition duration-700 group-hover:scale-125' aria-hidden='true' />
+      <div className='relative aspect-[16/9] overflow-hidden bg-[#dce6f3]'>
+        <Image
+          src={article.image}
+          alt={article.title}
+          fill
+          sizes='(max-width: 767px) calc(100vw - 40px), (max-width: 1023px) calc(50vw - 36px), 400px'
+          className='object-cover transition-transform duration-700 group-hover:scale-105'
+        />
+        <div className='pointer-events-none absolute inset-0 bg-linear-to-b from-black/15 via-transparent to-black/20' aria-hidden='true' />
         <span className={`absolute left-4 top-4 z-10 rounded-full px-3 py-1.5 text-[0.62rem] font-bold uppercase tracking-[0.13em] shadow-sm ${article.badge}`}>{article.category}</span>
-        <span className='absolute right-4 top-4 z-10 flex items-center gap-1.5 rounded-full border border-white/55 bg-white/60 px-2.5 py-1.5 text-[0.68rem] font-semibold text-[#485970] backdrop-blur-sm'>
+        <span className='absolute right-4 top-4 z-10 flex items-center gap-1.5 rounded-full border border-white/60 bg-white/80 px-2.5 py-1.5 text-[0.68rem] font-semibold text-[#485970] shadow-sm backdrop-blur-sm'>
           <Clock3 size={12} aria-hidden='true' />
           {article.readTime}
         </span>
-        <div className='absolute inset-0 grid place-items-center'>
-          <span className={`grid h-24 w-24 place-items-center rounded-[2rem] border border-white/65 bg-white/45 ${article.ink} shadow-[inset_0_1px_0_rgba(255,255,255,0.85),0_18px_40px_rgba(20,58,105,0.12)] backdrop-blur-sm transition duration-700 group-hover:-rotate-6 group-hover:scale-110 group-hover:bg-white/70`}>
-            <Icon size={44} strokeWidth={1.5} aria-hidden='true' />
-          </span>
-        </div>
-        <span className='absolute bottom-4 right-4 text-5xl font-bold tracking-[-0.09em] text-[#0a214d]/[0.055]' aria-hidden='true'>{String(index + 1).padStart(2, '0')}</span>
+        <span className='absolute bottom-4 right-4 text-5xl font-bold tracking-[-0.09em] text-white/25 drop-shadow-sm' aria-hidden='true'>{String(index + 1).padStart(2, '0')}</span>
       </div>
 
       <div className='flex flex-1 flex-col p-6 sm:p-7'>

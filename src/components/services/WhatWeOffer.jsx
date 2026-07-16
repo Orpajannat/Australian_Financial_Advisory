@@ -132,7 +132,7 @@ function ServiceCard ({ service, index }) {
 
 export default function WhatWeOffer () {
   return (
-    <section className='relative overflow-hidden bg-[#f6f9fe] px-5 py-20 sm:px-8 sm:py-24 lg:px-10 lg:py-28'>
+    <section id='service-list' className='relative scroll-mt-24 overflow-hidden bg-[#f6f9fe] px-5 py-20 sm:px-8 sm:py-24 lg:px-10 lg:py-28'>
       <div className='pointer-events-none absolute -left-32 top-40 h-80 w-80 rounded-full bg-[#dcecff]/60 blur-3xl' aria-hidden='true' />
       <div className='pointer-events-none absolute -right-36 bottom-48 h-96 w-96 rounded-full bg-[#e3efff]/70 blur-3xl' aria-hidden='true' />
 
