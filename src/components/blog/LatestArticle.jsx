@@ -5,7 +5,7 @@ import {
   Clock3,
 } from 'lucide-react'
 
-const articles = [
+export const articles = [
   {
     title: 'How to Build a Strong Financial Foundation',
     excerpt: 'The essential building blocks for creating clarity, resilience, and lasting financial confidence.',
