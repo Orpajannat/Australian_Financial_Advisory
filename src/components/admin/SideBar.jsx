@@ -57,7 +57,6 @@ export default function SideBar() {
         <div className="min-h-0 flex-1 overflow-y-auto">
             <div className="flex min-h-32 flex-col justify-center border-b border-blue-900/10 px-5 py-5">
                 <Image src="/images/MainLogo.png" alt="Australian Financial Advisory" width={260} height={86} className="h-auto w-full" priority />
-                <p className="mt-1 pl-16 text-xs font-semibold tracking-[0.16em] text-neutral-400 uppercase">Admin Panel</p>
             </div>
             <nav className="flex flex-col gap-2 px-4 py-6" aria-label="Admin navigation">
               {menuItems.map(({ href, label, Icon, exact }) => {
@@ -73,8 +72,8 @@ export default function SideBar() {
                     aria-current={isActive ? 'page' : undefined}
                     className={`flex w-full items-center gap-3 rounded-xl border px-4 py-3 text-sm font-semibold transition-colors ${
                       isActive
-                        ? 'border-[#02153E] bg-[#02153E] text-white shadow-[0_10px_25px_-15px_rgba(2,21,62,0.9)]'
-                        : 'border-[#02153E] bg-white/50 text-[#02153E] hover:bg-[#02153E] hover:text-white'
+                        ? 'border-[#02153E]/30 bg-[#02153E] text-white shadow-[0_10px_25px_-15px_rgba(2,21,62,0.9)]'
+                        : 'border-[#02153E]/30 bg-white/50 text-[#02153E] hover:bg-[#02153E] hover:text-white'
                     }`}
                   >
                     <Icon size={17} strokeWidth={1.9} />
@@ -84,10 +83,10 @@ export default function SideBar() {
               })}
             </nav>
         </div>
-        <button type="button" className="flex min-h-12 w-full flex-row items-center justify-center gap-2 bg-[#02153E] px-4 py-3 text-sm font-semibold text-white transition hover:bg-blue-950">
+        <Link href="/" type="button" className="flex min-h-12 w-full flex-row items-center justify-center gap-2 bg-[#02153E] px-4 py-3 text-sm font-semibold text-white transition hover:bg-blue-950">
             <LogOut size={18} />
             Logout
-        </button>
+        </Link>
       </aside>
     </>
   )
